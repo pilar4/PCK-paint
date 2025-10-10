@@ -23,6 +23,7 @@ class PaintBase(QWidget):
 
 
 class Background(PaintBase):
+    # noinspection PyMethodMayBeStatic
     def paint(self, painter):       # warning that some functions like this saying "paint may be static"
         painter.setPen(BLACK_PEN)   # should be ignored because it doesn't take PyQt6 into consideration
         parameters_f = QLineF(width / 2, 0, width / 2, height)
@@ -31,6 +32,7 @@ class Background(PaintBase):
 
 
 class Euclidean(PaintBase):
+    # noinspection PyMethodMayBeStatic
     def paint(self, painter):
         painter.setPen(BLACK_PEN)
 
@@ -58,7 +60,7 @@ class Euclidean(PaintBase):
 
 
 class PDM(PaintBase):
-
+    # noinspection PyMethodMayBeStatic
     def paint(self, painter):
         painter.setPen(BLACK_PEN)
 
